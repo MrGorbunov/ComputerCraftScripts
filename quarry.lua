@@ -382,6 +382,10 @@ do
 	junkWhiteList = newSet()
 	junkWhiteList:addKey("minecraft:cobblestone")
 	junkWhiteList:addKey("minecraft:netherrack")
+	junkWhiteList:addKey("minecraft:dirt")
+	junkWhiteList:addKey("minecraft:diorite")
+	junkWhiteList:addKey("minecraft:granite")
+	junkWhiteList:addKey("minecraft:andesite")
 	junkWhiteList:addKey("minecraft:end_stone")
 	junkWhiteList:addKey("theabyss:abyssbrokenstone")
 
@@ -405,7 +409,7 @@ function refuelToThreshold()
 		if itemInfo and fuelWhiteList:contains(itemInfo["name"]) then
 			turtle.select(i)
 
-			while needToRefuel() and turtle.getItemDeatil() do
+			while needToRefuel() and turtle.getItemDetail() do
 				turtle.refuel()
 			end
 		end
