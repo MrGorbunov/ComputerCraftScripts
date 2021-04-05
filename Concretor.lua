@@ -245,17 +245,17 @@ function checkForValidChestSetup (CHEST_LIST, placeIntoChest, pullFromAbove)
 	if placeIntoChest then
 		blockBelowExists, blockInfo = turtle.inspectDown()
 
-		assert(blockBelowExists, "Improper Setup! You said Y to placing into a chest below. However, no block was detected below.")
+		assert(blockBelowExists, "Improper Setup! You said (Y)es to placing into a chest below. However, no block was detected below.")
 
-		assert(CHEST_LIST:contains(blockInfo.name), "Improper Setup! You said Y to placing into a chest below. However, an improper block was detected below. Try using a different type of chest, or talk to Michael.")
+		assert(CHEST_LIST:contains(blockInfo.name), "Improper Setup! You said (Y)es to placing into a chest below. However, an improper block was detected below. Try using a different type of chest, or talk to Michael.")
 	end
 
 	if pullFromAbove then
 		blockBelowExists, blockInfo = turtle.inspectUp()
 
-		assert(blockBelowExists, "Improper Setup! You said Y to pulling from above. However, no block was detected above the turtle.")
+		assert(blockBelowExists, "Improper Setup! You said (Y)es to pulling from above. However, no block was detected above the turtle.")
 
-		assert(CHEST_LIST:contains(blockInfo.name), "Improper Setup! You said Y to pulling from a chest above. However, an improper block was detected above. Try using a different type of chest, or talk to Michael.")
+		assert(CHEST_LIST:contains(blockInfo.name), "Improper Setup! You said (Y)es to pulling from a chest above. However, an improper block was detected above. Try using a different type of chest, or talk to Michael.")
 	end
 end
 
